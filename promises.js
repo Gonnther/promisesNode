@@ -11,7 +11,7 @@ var fs = require('fs'),
 
 
 promise
-	.then( (resolved, rejected) => {
+	.then( (dataPromise) => {
 		console.log('el archivo existe')
 		return new Promise((res, rej)=>{
 			fs.readFile(file, function(err, data){
@@ -19,7 +19,7 @@ promise
 			})
 		})
 	} )
-	.then( (resolved, rejected) => {
+	.then( (dataPromise) => {
 		console.log('el archivo se ha leido exitosamente')
 		return new Promise((res, rej)=>{
 			fs.writeFile(newFile, resolved, function(err){
@@ -27,7 +27,7 @@ promise
 			})
 		})
 	} )
-	.then( (resolved, rejected) => {
+	.then( (dataPromise) => {
 		console.log(resolved)
 	} )
 	.catch((err)=> {
