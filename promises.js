@@ -1,6 +1,6 @@
 'use strict'
 
-var fs = require('fs'),
+let fs = require('fs'),
 	file = './mitxt.txt',
 	newFile = './mitxtPromise-es6.txt',
 	promise = new Promise((res, rej)=>{
