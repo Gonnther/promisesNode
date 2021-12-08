@@ -9,9 +9,8 @@ let fs = require('fs'),
 		})
 	})
 
-
 promise
-	.then( (dataPromise) => {
+	.then((dataPromise) => {
 		console.log('el archivo existe')
 		return new Promise((res, rej)=>{
 			fs.readFile(file, function(err, data){
